@@ -5,14 +5,14 @@ set -e -u -o pipefail
 declare -r SCRIPT_DIR=$(cd -P $(dirname $0) && pwd)
 declare COMMAND="help"
 
-GIT_URL=https://github.com/wpernath/book-example.git
+GIT_URL=https://github.com/rishabhsvats/book-example.git
 GIT_REVISION=main
 PIPELINE=build-and-push-image
 CONTEXT_DIR=the-source
-IMAGE_NAME=quay.io/wpernath/person-service
-IMAGE_USER=wpernath
+IMAGE_NAME=quay.io/rhn_support_rissingh/person-service
+IMAGE_USER=rhn_support_rissingh
 IMAGE_PASSWORD=
-TARGET_NAMESPACE=book-tekton
+TARGET_NAMESPACE=rishabh-book-tekton
 
 valid_command() {
   local fn=$1; shift
